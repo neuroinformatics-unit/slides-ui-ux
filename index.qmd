@@ -1,14 +1,14 @@
 ---
-title: A template presentation
-subtitle: so much fun
-author: SWC Neuroinformatics Unit
+title: Some thoughts about UX
+subtitle: in Research Software Engineering
+author: Alessandro Felder
 execute: 
   enabled: true
 format:
     revealjs:
         theme: [default, niu-dark.scss]
         logo: img/logo_niu_dark.png
-        footer: "Edit this footer | 2023-07-26"
+        footer: "UX in RSE | 2024-01-10"
         slide-number: c
         menu:
             numbers: true
@@ -28,7 +28,7 @@ format:
     html:
         theme: [default, niu-dark.scss]
         logo: img/logo_niu_dark.png
-        date: "2023-07-05"
+        date: "2024-01-10"
         toc: true
         code-overflow: scroll
         highlight-style: atom-one
@@ -43,69 +43,106 @@ my-custom-stuff:
    my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
 ---
 
-## Contents
-
-Some example slides - [also look at example RevealJS slides in the Quarto docs](https://quarto.org/docs/presentations/revealjs/)
-
-* Non-executable and executable code-blocks
-* bullet points with highlighting 
-* two-column slides 
-* how to include a slide from a separate MD file
-* preview and link to a webpage
-
-## Just a code block, nothing gets executed...
-
-... but there is some fancy highlighting
-
-```{.python code-line-numbers="1|3|4-9"}
-from pathlib import Path
-
-home_path = Path.home()
-if home_path.exists():
-  data_path = home_path / "data"
-else:
-  pass
-  # raise some error maybe?
-```
-
-## A code block that's actually executed at render-time
-
-```{python}
-#| echo: true
-#| code-fold: true
-
-from pathlib import Path
-
-print("Hello world")
-```
-
-## You can execute code without showing that you have by using #|echo: false
-```{python}
-#| echo: false
-
-from pathlib import Path
-
-print("Hello world")
-```
-
-{{< include slides/extra_slide.qmd >}}
-
-## An example image
-
-Include an image:
-
-![](img/bg_logo_wide.png){width=900 fig-align=center}
-
-
-## Link and a preview a webpage:
+## What is UX?
 
 ::: {style="text-align: center; margin-top: 1em"}
-[interoperable Python-based tools for computational neuroanatomy](https://brainglobe.info/index.html){preview-link="true" style="text-align: center"}
+[Definition according to NN/g](https://www.nngroup.com/articles/definition-user-experience/
+){preview-link="true" style="text-align: center"}
 :::
 
-## Use a variable several times
+> "User experience" encompasses all aspects of the end-user's interaction with the company, its services, and its products. 
 
-Variables defined in the metadata is re-useable anywhere
+## Why talk about UX in RSE?
+* an often-neglected, possibly key indicator of success in (open) research software
+* being discussed more and more on the RSE grapevine
+* as a group, we develop (desktop, web) apps (napari, RSP vision, ...)
 
-* {{< meta my-custom-stuff.my-reuseable-variable >}}
-* {{< meta my-custom-stuff.my-reuseable-variable >}}
+## Why should I talking about UX?
+* went on a two-day evening course once, so I am qualified (obviously!)
+* Almost all major coding projects I've worked on had a UI component (but I've only recently _really_ started to this about this!) 
+* a key principle used to guide decisions about BrainGlobe
+
+## The app designer's challenge {.smaller}
+
+> We’re Responsible for Big, Complex Products...
+>
+> ...That Are Cluttered...
+>
+> ...Confusing...
+>
+> ...Involve Complicated, Repetitive Workflows...
+>
+> ...And Present Complex Data...
+>
+> ...with Long legacies...
+>
+> ...And if We Change Things, People Get Angry.
+
+- Raluca Budiu, Director of Research at Norman Nielsen Group (NN/g)
+
+
+## Key themes in approaching to this challenge (TLDR of NN/g course)
+
+- Understand the user task
+- minimise visual search
+- use progressive disclosure
+- don't surprise users
+
+## Minimise visual search
+
+- Fitt's law
+- Group things that belong together
+- experience == expectation
+
+Example: BrainGlobe header widget
+
+## An example
+
+![](img/qgis.jpeg){width=700 fig-align=center}
+
+## [Progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/)
+
+> Progressive disclosure defers advanced or rarely used features to a secondary screen...
+
+Example: `brainglobe-elastix`
+
+## Understanding the user task
+
+- The app’s conceptual model should match users’ mental model.
+
+Example: version manager widget
+
+
+## Understanding the user task
+
+(An example from personal experience where the UX went ~wrong because of a decision I took)
+
+::: {style="text-align: center; margin-top: 1em"}
+[PyCascadia](https://github.com/UCL/pyCascadia){preview-link="true" style="text-align: center"}
+:::
+
+## Don't surprise your users
+
+- Communicate changes well, and change things gradually.
+
+Example: Will Graham's blogs on BrainGlobe website.
+
+## How can we improve this menu?
+
+## Stuff I wonder about
+
+* How can we make UI/UX-related code good?
+* How can we cater to different types of users?
+* How can we do User Research well (at SWC)?
+* What makes Resarch-related UI/UX special (if anything)?
+* Can we use UX insights to improve the developer/contributor experience?
+
+## Other people working in this area (that I'm aware of)
+* Meag Doherty (NIH, UX lead) (e.g. her [Usable Software Ecosystem Research](https://user-project.superbloom.design/) website)
+* Diego Alonso Álvarez (Head of RSE at Imperial College London) (e.g. [a blog about GUIs in Research Software](https://www.software.ac.uk/blog/guis-research-software-why-are-they-relevant-part-one) resulting from his 2021 SSI fellowship)
+* Napari community (e.g. [issue 6345: Explore layer groups design and function ](https://github.com/napari/napari/issues/6345))
+* US-RSE UX working group (#wg-ux, #ux channels)
+
+## Further resources
+
+- [Resources collected by US-RSE UX working group](https://docs.google.com/document/d/1MvmpHb6rdTmOAIhJMSupItJAbVWGr3FeObkWUqETV54/edit)
