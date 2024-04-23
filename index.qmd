@@ -1,8 +1,6 @@
 ---
-title: Some thoughts about UX
-title-slide-attributes:
-    data-background-image: img/SWC-light-switch.jpg
-subtitle: in Research Software Engineering
+title: Learning about UX
+subtitle: in the BrainGlobe context
 author: Alessandro Felder
 execute: 
   enabled: true
@@ -10,7 +8,7 @@ format:
     revealjs:
         theme: [default, niu-dark.scss]
         logo: img/logo_niu_dark.png
-        footer: "UX in RSE | 2024-01-10"
+        footer: "UX in RSE | 2024-04-23"
         slide-number: c
         menu:
             numbers: true
@@ -44,6 +42,81 @@ format:
 my-custom-stuff:
    my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
 ---
+
+
+## Introduction (geographical)
+
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 0.5em;"}
+![Photo by <a href="https://unsplash.com/@rickpsd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Henrique Ferreira</a> on <a href="https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-6p-I-X-sPUY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](img/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg){height=400}
+:::
+
+::: {.column width="50%"}
+Alessandro Felder
+
+* grew up in (mostly) Zurich
+* Came to London via Paris for my PhD in 2014
+* Joined UCL as RSE after a postdoc in 2019
+* Seconded to [Sainsbury Wellcome Centre 2023](https://neuroinformatics.dev/)
+:::
+
+::::
+
+## Introduction (research background)
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 0.5em;"}
+![Photo from Felder et al, RSOS, 2017](img/rsos170431f01.jpg){height=400}
+:::
+
+::: {.column width="50%"}
+Research background
+
+* Computational Science MSc
+* Comparative anatomy
+* Bone tissue imaging
+* Image analysis
+:::
+
+::::
+
+## Introduction (fun)
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 0.5em;"}
+![Photo by <a href="https://unsplash.com/@ameefairbankbrown?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Amee Fairbank-Brown</a> on <a href="https://unsplash.com/photos/yellow-and-black-bird-on-brown-tree-branch-Jc9pijSwYjY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](img/amee-fairbank-brown-Jc9pijSwYjY-unsplash.jpg){height=400}
+:::
+
+::: {.column width="50%"}
+
+What I do for fun (apart from coding)
+
+* Football
+* Growing vegetables
+* Bird watching
+:::
+
+::::
+
+## Introduction 
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 0.5em;"}
+![BrainGlobe](img/bg_logo_wide.png){height=400}
+:::
+
+::: {.column width="50%"}
+What I actually do for UCL
+
+* Lead developer on [BrainGlobe project](https://brainglobe.info/)
+* open source tools for neuroanatomy
+* in a shared coordinate space
+* species- and imaging-modality independent
+:::
+
+::::
+
 
 ## What is UX?
 
@@ -115,31 +188,22 @@ Example: `brainglobe-registration`
 Example: version manager widget
 
 
-## Understanding the user task
-
-(An example from personal experience where the UX went ~wrong because of a decision I took)
-
-::: {style="text-align: center; margin-top: 1em"}
-[PyCascadia](https://github.com/UCL/pyCascadia){preview-link="true" style="text-align: center"}
-:::
-
 ## Don't surprise your users
 
 - Communicate changes well, and change things gradually.
 
 Example: Will Graham's blogs on BrainGlobe website.
 
-## How can we improve this menu?
-
 ## Stuff I wonder about
 
 * How can we make UI/UX-related code good?
 * How can we cater to different types of users?
-* How can we do User Research well (at SWC)?
+* How can we do User Research well (at ARC)?
 * What makes Resarch-related UI/UX special (if anything)?
 * Can we use UX insights to improve the developer/contributor experience?
 
 ## Other people working in this area (that I'm aware of)
+* ARC slack #ui-ux-design
 * Meag Doherty (NIH, UX lead) (e.g. her [Usable Software Ecosystem Research](https://user-project.superbloom.design/) website)
 * Diego Alonso Álvarez (Head of RSE at Imperial College London) (e.g. [a blog about GUIs in Research Software](https://www.software.ac.uk/blog/guis-research-software-why-are-they-relevant-part-one) resulting from his 2021 SSI fellowship)
 * Napari community (e.g. [issue 6345: Explore layer groups design and function ](https://github.com/napari/napari/issues/6345))
